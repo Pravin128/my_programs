@@ -1,15 +1,14 @@
 #prime numbers between two number taken from user
-def prime(): 
-    n=int(input("enter number:"))  #for getting input from user
-    flag=0
-    for i in range(2,n):  #range to divide the number
-        if n%i==0:       
+a=int(input("enter number 1: "))   #this is first number
+b=int(input("enter number 2: "))   #this is second number
+
+for i in range(a,b):
+    flag=0   #indicator variable
+    for j in range(2,i):
+        if i%j==0:
             flag=1
             break
-    if n==1:
-        print("not prime or composite")
-    elif flag==0:
-        print("prime")
-    else:
-        print("composite")
-prime()
+    if flag==0:
+        print(i,"prime")  #this prints prime numbers between range
+    # else:
+    #     print(i,"compposite")      #uncomment this to find composite numbers also
